@@ -17,6 +17,20 @@ func main() {
 		fmt.Println(key, value)
 	}
 
+	// delete a value
+	delete(ages, "parsa")
+
+	// check specefic key is valid or not
+	age, ok := ages["maryam"]
+	age, ok = ages["sadegh"]
+	age, ok = ages["Azerakhsh"]
+
+	if ok != true {
+		fmt.Println("user not valid")
+	} else {
+		fmt.Println(age)
+	}
+
 }
 
 //
