@@ -32,6 +32,21 @@ func main() {
 
 	// with : you can accsess to specefic part of slice
 	// point  the last index is not included. for example nums[0:3] would include this indexes  [0,1,2]
-	fmt.Println("\n", nums[0:3]) // output : 10 , 11 ,123  index [0,1,2]
+	fmt.Println("\n", nums[0:3]) // output : 10 , 11 ,123  index [0,,2]
 
+	//  variadic functions are functions that in parameters they have slice
+	// it means you are not limited to pass how many parameters as a type
+
+	// e.g
+	numbers2 := []int{1, 2, 3}
+	fmt.Println(sum(numbers2...))
+}
+func sum(numbers ...int) int {
+
+	var sum int
+
+	for i := 0; i < len(numbers); i++ {
+		sum += i
+	}
+	return sum
 }
